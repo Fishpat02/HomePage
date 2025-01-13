@@ -4,6 +4,12 @@
   page.data.title = 'Home'
 </script>
 
+<style lang="scss">
+  h1 {
+    font-size: 2rem;
+  }
+</style>
+
 <svelte:head>
   <title>{page.data.title}</title>
 </svelte:head>
