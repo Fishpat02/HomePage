@@ -1,7 +1,7 @@
 <script lang="ts">
-  import { page } from '$app/state'
+  import { page } from "$app/state";
 
-  page.data.title = 'Home'
+  page.data.title = "Home";
 </script>
 
 <style lang="scss">
@@ -15,5 +15,5 @@
 </svelte:head>
 
 <div>
-<h1>Welcome to my home page!</h1>
+  <h1>Welcome to my home page!</h1>
 </div>
