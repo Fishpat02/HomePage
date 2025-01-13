@@ -5,6 +5,7 @@
     "npm:@sveltejs/kit@2": "2.15.2_@sveltejs+vite-plugin-svelte@4.0.4__svelte@5.17.3___acorn@8.14.0__vite@5.4.11_svelte@5.17.3__acorn@8.14.0_vite@6.0.7",
     "npm:@sveltejs/vite-plugin-svelte@4": "4.0.4_svelte@5.17.3__acorn@8.14.0_vite@5.4.11",
     "npm:autoprefixer@^10.4.20": "10.4.20_postcss@8.4.49",
+    "npm:postgres@^3.4.5": "3.4.5",
     "npm:svelte-check@4": "4.1.3_svelte@5.17.3__acorn@8.14.0_typescript@5.6.3",
     "npm:svelte@5": "5.17.3_acorn@8.14.0",
     "npm:tailwindcss@^3.4.9": "3.4.17_postcss@8.4.49",
@@ -849,6 +850,9 @@
         "source-map-js"
       ]
     },
+    "postgres@3.4.5": {
+      "integrity": "sha512-cDWgoah1Gez9rN3H4165peY9qfpEo+SA61oQv65O3cRUE1pOEoJWwddwcqKE8XZYjbblOJlYDlLV4h67HrEVDg=="
+    },
     "queue-microtask@1.2.3": {
       "integrity": "sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A=="
     },
@@ -1148,6 +1152,7 @@
         "npm:@sveltejs/kit@2",
         "npm:@sveltejs/vite-plugin-svelte@4",
         "npm:autoprefixer@^10.4.20",
+        "npm:postgres@^3.4.5",
         "npm:svelte-check@4",
         "npm:svelte@5",
         "npm:tailwindcss@^3.4.9",

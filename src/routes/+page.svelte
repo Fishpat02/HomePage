@@ -14,4 +14,6 @@
   <title>{page.data.title}</title>
 </svelte:head>
 
+<div>
 <h1>Welcome to my home page!</h1>
+</div>
