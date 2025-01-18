@@ -1,3 +1,7 @@
 {
+  "fmt": {
+    "semiColons": false,
+    "singleQuote": true
+  },
   "unstable": ["fmt-component", "fmt-sql"]
 }
