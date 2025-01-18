@@ -11,4 +11,6 @@ export const load: PageServerLoad = async ({ params }) => {
       message: 'Not found',
     })
   }
+
+  return { character }
 }
