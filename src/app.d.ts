@@ -8,6 +8,13 @@ declare global {
     // interface PageState {}
     // interface Platform {}
   }
+
+  type Character = {
+    id: number
+    name: string
+    age: number
+    species: string
+  }
 }
 
-export {};
+export {}
