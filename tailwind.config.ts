@@ -1,11 +1,18 @@
-import type { Config } from "tailwindcss";
+import type { Config } from 'tailwindcss'
+import daisyui from 'daisyui'
 
 export default {
-  content: ["./src/**/*.{html,js,svelte,ts}"],
+  content: ['./src/**/*.{html,js,svelte,ts}'],
 
   theme: {
     extend: {},
   },
 
-  plugins: [],
-} satisfies Config;
+  plugins: [
+    daisyui,
+  ],
+
+  daisyui: {
+    base: true,
+  },
+} satisfies Config

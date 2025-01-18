@@ -5,6 +5,7 @@
     "npm:@sveltejs/kit@2": "2.15.2_@sveltejs+vite-plugin-svelte@4.0.4__svelte@5.17.3___acorn@8.14.0__vite@5.4.11_svelte@5.17.3__acorn@8.14.0_vite@6.0.7",
     "npm:@sveltejs/vite-plugin-svelte@4": "4.0.4_svelte@5.17.3__acorn@8.14.0_vite@5.4.11",
     "npm:autoprefixer@^10.4.20": "10.4.20_postcss@8.4.49",
+    "npm:daisyui@^4.12.23": "4.12.23",
     "npm:postgres@^3.4.5": "3.4.5",
     "npm:svelte-check@4": "4.1.3_svelte@5.17.3__acorn@8.14.0_typescript@5.6.3",
     "npm:svelte@5": "5.17.3_acorn@8.14.0",
@@ -470,8 +471,27 @@
         "which"
       ]
     },
+    "css-selector-tokenizer@0.8.0": {
+      "integrity": "sha512-Jd6Ig3/pe62/qe5SBPTN8h8LeUg/pT4lLgtavPf7updwwHpvFzxvOQBHYj2LZDMjUnBzgvIUSjRcf6oT5HzHFg==",
+      "dependencies": [
+        "cssesc",
+        "fastparse"
+      ]
+    },
     "cssesc@3.0.0": {
       "integrity": "sha512-/Tb/JcjK111nNScGob5MNtsntNM1aCNUDipB/TkwZFhyDrrE47SOx/18wF2bbjgc3ZzCSKW1T5nt5EbFoAz/Vg=="
+    },
+    "culori@3.3.0": {
+      "integrity": "sha512-pHJg+jbuFsCjz9iclQBqyL3B2HLCBF71BwVNujUYEvCeQMvV97R59MNK3R2+jgJ3a1fcZgI9B3vYgz8lzr/BFQ=="
+    },
+    "daisyui@4.12.23": {
+      "integrity": "sha512-EM38duvxutJ5PD65lO/AFMpcw+9qEy6XAZrTpzp7WyaPeO/l+F/Qiq0ECHHmFNcFXh5aVoALY4MGrrxtCiaQCQ==",
+      "dependencies": [
+        "css-selector-tokenizer",
+        "culori",
+        "picocolors",
+        "postcss-js"
+      ]
     },
     "debug@4.3.7": {
       "integrity": "sha512-Er2nc/H7RrMXZBFCEim6TCmMk02Z8vLC2Rbi1KEBggpo0fS6l0S1nnapwmIi3yW/+GOJap1Krg4w0Hg80oCqgQ==",
@@ -582,6 +602,9 @@
         "merge2",
         "micromatch"
       ]
+    },
+    "fastparse@1.1.2": {
+      "integrity": "sha512-483XLLxTVIwWK3QTrMGRqUfUpoOs/0hbQrl2oz4J0pAcm3A3bu84wxTFqGqkJzewCLdME38xJLJAxBABfQT8sQ=="
     },
     "fastq@1.18.0": {
       "integrity": "sha512-QKHXPW0hD8g4UET03SdOdunzSouc9N4AuHdsX8XNcTsuz+yYFILVNIX4l9yHABMhiEI9Db0JTTIpu0wB+Y1QQw==",
@@ -1152,6 +1175,7 @@
         "npm:@sveltejs/kit@2",
         "npm:@sveltejs/vite-plugin-svelte@4",
         "npm:autoprefixer@^10.4.20",
+        "npm:daisyui@^4.12.23",
         "npm:postgres@^3.4.5",
         "npm:svelte-check@4",
         "npm:svelte@5",
