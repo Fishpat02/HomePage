@@ -1,4 +1,9 @@
-<div class="mx-[25%]">
+<script lang="ts">
+  import { characters } from '$lib/db'
+  import CharacterCard from '../components/CharacterCard.svelte'
+</script>
+
+<div class="mx-[25%] mb-12">
   <h1 class="text-center text-2xl underline font-bold py-4">
     Welcome to my home page!
   </h1>
@@ -7,4 +12,10 @@
     nisi sint doloribus mollitia praesentium veritatis culpa quidem, sapiente
     nostrum, soluta velit eligendi, in ratione officiis cum distinctio quis!
   </p>
+</div>
+
+<div class="grid grid-cols-3 gap-4 mx-12">
+  {#each characters as character}
+    <CharacterCard {character} />
+  {/each}
 </div>

@@ -14,6 +14,7 @@
 
   <div class="navbar-center">
     <a href="/" class="btn btn-ghost text-xl">Home</a>
+    <a href="/characters" class="btn btn-ghost text-xl">Characters</a>
     <a href="/about" class="btn btn-ghost text-xl">About</a>
   </div>
 
