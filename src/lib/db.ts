@@ -37,3 +37,14 @@ export async function addCharacters(characters: Character[]) {
     await closeDB()
   }
 }
+
+export async function getCharacters() {
+  try {
+    const coll = await openDB()
+    const cursor = coll.find({}).project<Character>({ _id: 0 })
+
+    return (await cursor.toArray())
+  } finally {
+    await closeDB()
+  }
+}
