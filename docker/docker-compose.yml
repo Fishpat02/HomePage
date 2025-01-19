@@ -1,0 +1,21 @@
+services:
+  db:
+    image: mongodb/mongodb-community-server:7.0.12-ubi8
+    container_name: mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./data:/data/db
+    environment:
+      MONGODB_INITDB_ROOT_USERNAME_FILE: /run/secrets/mongo_user
+      MONGODB_INITDB_ROOT_PASSWORD_FILE: /run/secrets/mongo_pw
+    secrets:
+      - mongo_user
+      - mongo_pw
+    restart: unless-stopped
+
+secrets:
+  mongo_user:
+    file: mongo_user.secret.txt
+  mongo_pw:
+    file: mongo_pw.secret.txt
