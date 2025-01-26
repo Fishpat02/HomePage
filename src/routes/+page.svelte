@@ -1,6 +1,6 @@
 <script lang="ts">
   import { characters } from '$lib/db'
-  import CharacterCard from '../components/CharacterCard.svelte'
+  import CharacterCard  from '$lib/components/CharacterCard.svelte'
 </script>
 
 <div class="mx-[25%] mb-12">
