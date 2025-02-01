@@ -1,6 +1,8 @@
 <script lang="ts">
   import '../app.css'
-  let { children } = $props()
+  import type { SvelteHTMLElements } from 'svelte/elements'
+
+  let { children }: SvelteHTMLElements['div'] = $props()
 </script>
 
 <svelte:head>
@@ -21,4 +23,4 @@
   <span class="navbar-end"></span>
 </nav>
 
-{@render children()}
+{@render children?.()}

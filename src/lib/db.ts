@@ -1,3 +1,5 @@
+import type { Character } from '$lib/types'
+
 export const characters: Character[] = [
   {
     id: 1,

@@ -1,4 +1,6 @@
 <script lang="ts">
+  import type { Character } from '$lib/types'
+
   let { character }: { character: Character } = $props()
 </script>
 

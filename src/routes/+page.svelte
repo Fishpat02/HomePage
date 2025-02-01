@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { characters } from '$lib/db'
   import CharacterCard  from '$lib/components/CharacterCard.svelte'
+  import { characters } from '$lib/db'
 </script>
 
 <div class="mx-[25%] mb-12">
@@ -15,7 +15,7 @@
 </div>
 
 <div class="grid grid-cols-3 gap-4 mx-12">
-  {#each characters as character}
-    <CharacterCard {character} />
+  {#each characters as character (character.id)}
+    <CharacterCard {character}/>
   {/each}
 </div>
