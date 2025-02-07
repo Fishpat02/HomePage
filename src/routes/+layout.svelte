@@ -1,4 +1,8 @@
 <script lang="ts">
+  import * as Sidebar from '$lib/components/ui/sidebar'
+  import AppSidebar from '$lib/components/app-sidebar.svelte'
+  import { ModeWatcher } from 'mode-watcher'
+
   import '../app.css'
   import type { SvelteHTMLElements } from 'svelte/elements'
 
@@ -9,18 +13,11 @@
   <title>Home Page</title>
 </svelte:head>
 
-<nav class="navbar bg-base-100 w-full">
-  <div class="navbar-start">
-    <a class="text-3xl italic" href="/">Character Emporium</a>
-  </div>
+<Sidebar.Provider>
+  <AppSidebar />
 
-  <div class="navbar-center">
-    <a href="/" class="btn btn-ghost text-xl">Home</a>
-    <a href="/characters" class="btn btn-ghost text-xl">Characters</a>
-    <a href="/about" class="btn btn-ghost text-xl">About</a>
-  </div>
-
-  <span class="navbar-end"></span>
-</nav>
-
-{@render children?.()}
+  <main>
+    <ModeWatcher />
+    {@render children?.()}
+  </main>
+</Sidebar.Provider>
