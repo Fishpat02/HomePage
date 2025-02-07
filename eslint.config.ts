@@ -5,6 +5,7 @@ import pluginJs from "@eslint/js";
 import tseslint from "typescript-eslint";
 import eslintPluginSvelte from "eslint-plugin-svelte";
 import svelteConfig from "./svelte.config.js";
+import eslintConfigPrettier from "eslint-config-prettier";
 
 import * as svelteParser from "svelte-eslint-parser";
 import * as typescriptParser from "@typescript-eslint/parser";
@@ -15,12 +16,13 @@ export default [
   pluginJs.configs.recommended,
   ...tseslint.configs.recommendedTypeChecked,
   ...eslintPluginSvelte.configs.recommended,
+  eslintConfigPrettier,
   {
     languageOptions: {
       parser: typescriptParser,
       parserOptions: {
         projectService: {
-          allowDefaultProject: ["*.ts"]
+          allowDefaultProject: ["*.ts"],
         },
         extraFileExtensions: [".svelte"],
         tsconfigRootDir: import.meta.dirname,
