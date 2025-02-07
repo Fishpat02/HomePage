@@ -1,6 +1,6 @@
-import { characters }          from '$lib/db'
-import type { Character }      from '$lib/types'
-import { error }               from '@sveltejs/kit'
+import { characters } from '$lib/db'
+import type { Character } from '$lib/types'
+import { error } from '@sveltejs/kit'
 import type { PageServerLoad } from './$types'
 
 export const load: PageServerLoad = ({ params }) => {

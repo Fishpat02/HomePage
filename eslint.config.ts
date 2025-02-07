@@ -1,39 +1,36 @@
-import type { Config } from "typescript-eslint";
+import type { Config } from 'typescript-eslint'
 
-import globals from "globals";
-import pluginJs from "@eslint/js";
-import tseslint from "typescript-eslint";
-import eslintPluginSvelte from "eslint-plugin-svelte";
-import svelteConfig from "./svelte.config.js";
-import eslintConfigPrettier from "eslint-config-prettier";
+import globals from 'globals'
+import pluginJs from '@eslint/js'
+import tseslint from 'typescript-eslint'
+import eslintPluginSvelte from 'eslint-plugin-svelte'
+import svelteConfig from './svelte.config.js'
+import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
 
-import * as svelteParser from "svelte-eslint-parser";
-import * as typescriptParser from "@typescript-eslint/parser";
+import * as svelteParser from 'svelte-eslint-parser'
+import * as typescriptParser from '@typescript-eslint/parser'
 
 export default [
-  { files: ["**/*.{js,mjs,cjs,ts}"] },
+  { files: ['**/*.{js,mjs,cjs,ts}'] },
   { languageOptions: { globals: { ...globals.browser, ...globals.node } } },
   pluginJs.configs.recommended,
   ...tseslint.configs.recommendedTypeChecked,
   ...eslintPluginSvelte.configs.recommended,
-  eslintConfigPrettier,
+  eslintPluginPrettierRecommended,
   {
     languageOptions: {
       parser: typescriptParser,
       parserOptions: {
         projectService: {
-          allowDefaultProject: ["*.ts"],
+          allowDefaultProject: ['*.ts'],
         },
-        extraFileExtensions: [".svelte"],
+        extraFileExtensions: ['.svelte'],
         tsconfigRootDir: import.meta.dirname,
       },
     },
   },
   {
-    files: [
-      "**/*.svelte",
-      "*.svelte",
-    ],
+    files: ['**/*.svelte', '*.svelte'],
     languageOptions: {
       parser: svelteParser,
       parserOptions: {
@@ -42,7 +39,4 @@ export default [
       },
     },
   },
-  {
-    rules: {},
-  },
-] satisfies Config;
+] satisfies Config
