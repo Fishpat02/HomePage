@@ -68,8 +68,18 @@
 @layer base {
   * {
     @apply border-border;
+    @apply transition-all;
   }
   body {
     @apply bg-background text-foreground;
+    transition: background-color theme(transitionDuration.200) theme(transitionTimingFunction.in-out);
+  }
+
+  .group[data-side="left"] .group-data-\[side\=left\]\:border-r {
+    transition: all theme(transitionDuration.200) theme(transitionTimingFunction.in-out);
+  }
+
+  .bg-sidebar, .bg-sidebar-border {
+    @apply transition-colors duration-200;
   }
 }

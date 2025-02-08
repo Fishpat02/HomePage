@@ -18,7 +18,7 @@
 
   <main class="w-full">
     <Sidebar.Trigger />
-    <ModeWatcher />
+    <ModeWatcher disableTransitions={false} />
     {@render children?.()}
   </main>
 </Sidebar.Provider>
