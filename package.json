@@ -19,7 +19,7 @@
     "@types/eslint-config-prettier": "^6.11.3",
     "@typescript-eslint/parser": "^8.23.0",
     "autoprefixer": "^10.4.20",
-    "bits-ui": "1.0.0-next.88",
+    "bits-ui": "1.0.0-next.90",
     "clsx": "^2.1.1",
     "eslint": "^9.19.0",
     "eslint-config-prettier": "^10.0.1",
