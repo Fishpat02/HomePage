@@ -17,6 +17,7 @@
   <AppSidebar />
 
   <main class="w-full">
+    <Sidebar.Trigger />
     <ModeWatcher />
     {@render children?.()}
   </main>

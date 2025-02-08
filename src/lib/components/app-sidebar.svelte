@@ -5,7 +5,6 @@
   import * as Sidebar from '$lib/components/ui/sidebar'
   import Sun from 'lucide-svelte/icons/sun'
   import Moon from 'lucide-svelte/icons/Moon'
-  import { Button } from '$lib/components/ui/button'
 
   import { toggleMode } from 'mode-watcher'
 
@@ -28,7 +27,7 @@
   ]
 </script>
 
-<Sidebar.Root>
+<Sidebar.Root collapsible="icon">
   <Sidebar.Content>
     <Sidebar.Group>
       <Sidebar.GroupContent>
@@ -49,13 +48,20 @@
       </Sidebar.GroupContent>
     </Sidebar.Group>
   </Sidebar.Content>
+  <Sidebar.Separator />
   <Sidebar.Footer>
-    <Button onclick={toggleMode} variant="default" size="icon">
-      <Sun
-        class="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-      <Moon
-        class="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-      <span class="sr-only">Toggle theme</span>
-    </Button>
+    <Sidebar.Menu>
+      <Sidebar.MenuButton
+        onclick={toggleMode}
+        size="sm"
+        class="size-fit"
+        variant="outline">
+        <Sun
+          class="rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+        <Moon
+          class="absolute rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+        <span class="sr-only">Toggle theme</span>
+      </Sidebar.MenuButton>
+    </Sidebar.Menu>
   </Sidebar.Footer>
 </Sidebar.Root>
