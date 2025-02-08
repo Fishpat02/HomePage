@@ -16,7 +16,7 @@
 <Sidebar.Provider>
   <AppSidebar />
 
-  <main>
+  <main class="w-full">
     <ModeWatcher />
     {@render children?.()}
   </main>

@@ -31,7 +31,6 @@
 <Sidebar.Root>
   <Sidebar.Content>
     <Sidebar.Group>
-      <Sidebar.GroupLabel>Navigation</Sidebar.GroupLabel>
       <Sidebar.GroupContent>
         <Sidebar.Menu>
           {#each items as item (item.title)}
@@ -51,7 +50,7 @@
     </Sidebar.Group>
   </Sidebar.Content>
   <Sidebar.Footer>
-    <Button onclick={toggleMode} variant="outline" size="icon">
+    <Button onclick={toggleMode} variant="default" size="icon">
       <Sun
         class="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
       <Moon
