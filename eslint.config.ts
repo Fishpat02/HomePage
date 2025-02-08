@@ -30,7 +30,7 @@ export default [
     },
   },
   {
-    files: ['**/*.svelte', '*.svelte'],
+    files: ['**/*.svelte'],
     languageOptions: {
       parser: svelteParser,
       parserOptions: {
@@ -39,4 +39,5 @@ export default [
       },
     },
   },
+  { ignores: ['**/components/ui/**/*.*'] },
 ] satisfies Config
