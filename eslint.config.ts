@@ -22,7 +22,9 @@ export default [
       parser: typescriptParser,
       parserOptions: {
         projectService: {
-          allowDefaultProject: ['*.ts'],
+          allowDefaultProject: [
+            '{eslint,postcss,svelte,tailwind}.config.{js,ts}',
+          ],
         },
         extraFileExtensions: ['.svelte'],
         tsconfigRootDir: import.meta.dirname,
