@@ -1,13 +1,9 @@
 <script lang="ts">
-<<<<<<< HEAD
-  import { characters } from '$lib/db'
-  import CharacterCard  from '$lib/components/CharacterCard.svelte'
-=======
-  import type { PageData } from './$types'
-  import CharacterCard from '../components/CharacterCard.svelte'
+  import type { PageProps } from './$types'
 
-  const { data }: { data: PageData } = $props()
->>>>>>> 9cd0fea (Modified pages to fetch from database instead of in-place object)
+  import CharacterCard from '$lib/components/CharacterCard.svelte'
+
+  const { data }: PageProps = $props()
 </script>
 
 <div class="mx-[25%] mb-12">
@@ -22,7 +18,7 @@
 </div>
 
 <div class="grid grid-cols-3 gap-4 mx-12">
-  {#each data.characters as character}
+  {#each data.characters as character (character.id)}
     <CharacterCard {character} />
   {/each}
 </div>

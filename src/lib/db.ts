@@ -1,10 +1,10 @@
 import { MongoClient } from 'mongodb'
+import type { Character } from '$lib/types'
 
 const DATABASE = 'HomePage'
 const COLLECTION = 'Characters'
 
-const uri =
-  `mongodb://${import.meta.env.VITE_MONGO_USER}:${import.meta.env.VITE_MONGO_PW}@localhost:27017/`
+const uri = `mongodb://${import.meta.env.VITE_MONGO_USER}:${import.meta.env.VITE_MONGO_PW}@localhost:27017/`
 const client = new MongoClient(uri)
 
 async function openDB() {
@@ -43,7 +43,7 @@ export async function getCharacters() {
     const coll = await openDB()
     const cursor = coll.find({}).project<Character>({ _id: 0 })
 
-    return (await cursor.toArray())
+    return await cursor.toArray()
   } finally {
     await closeDB()
   }
