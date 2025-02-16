@@ -6,8 +6,11 @@
   const props: { character: Character; class?: ClassValue } = $props()
 </script>
 
-<a href={`/characters/${props.character.id}`} aria-label={props.character.name}>
-  <Card.Root class={[props.class]}>
+<a
+  href={`/characters/${props.character.id}`}
+  aria-label={props.character.name}
+  class={[props.class]}>
+  <Card.Root>
     <Card.Header>
       <Card.Title>{props.character.name}</Card.Title>
       <Card.Description>{props.character.shortDescription}</Card.Description>
