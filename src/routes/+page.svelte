@@ -1,6 +1,9 @@
 <script lang="ts">
+  import type { PageProps } from './$types'
+
   import CharacterCard from '$lib/components/CharacterCard.svelte'
-  import { characters } from '$lib/db'
+
+  const { data }: PageProps = $props()
 </script>
 
 <div class="mx-[25%] mb-12">
@@ -15,7 +18,7 @@
 </div>
 
 <div class="grid grid-cols-3 gap-4 mx-12">
-  {#each characters as character (character.id)}
+  {#each data.characters as character (character.id)}
     <CharacterCard {character} />
   {/each}
 </div>
