@@ -18,8 +18,10 @@
     </blockquote>
   </div>
   <Separator class="my-4" />
-  <div>
-    <CharacterSummary character={data.character} class="inline-block align-top lg:min-w-[50%]" />
-    <CharacterCard character={data.character} class="hidden lg:inline-block w-fit float-right mr-12" />
+  <div class="my-4 mx-2 lg:mr-[25%]">
+    <CharacterCard
+      character={data.character}
+      class="hidden md:block w-fit float-right mx-6 mb-6 before:h-0" />
+    <CharacterSummary character={data.character} class="inline align-top" />
   </div>
 </div>
