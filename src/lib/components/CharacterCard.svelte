@@ -1,21 +1,22 @@
 <script lang="ts">
   import type { Character } from '$lib/types'
   import * as Card from '$lib/components/ui/card'
+  import type { ClassValue } from 'svelte/elements'
 
-  let { character }: { character: Character } = $props()
+  const props: { character: Character; class?: ClassValue } = $props()
 </script>
 
-<a href={`/characters/${character.id}`} aria-label={character.name}>
-  <Card.Root>
+<a href={`/characters/${props.character.id}`} aria-label={props.character.name}>
+  <Card.Root class={[props.class]}>
     <Card.Header>
-      <Card.Title>{character.name}</Card.Title>
-      <Card.Description>{character.shortDescription}</Card.Description>
+      <Card.Title>{props.character.name}</Card.Title>
+      <Card.Description>{props.character.shortDescription}</Card.Description>
     </Card.Header>
 
     <Card.Content>
-      <p>Age: {character.age}</p>
-      <p>Gender: {character.gender}</p>
-      <p>Species: {character.species}</p>
+      <p>Age: {props.character.age}</p>
+      <p>Gender: {props.character.gender}</p>
+      <p>Species: {props.character.species}</p>
     </Card.Content>
   </Card.Root>
 </a>
