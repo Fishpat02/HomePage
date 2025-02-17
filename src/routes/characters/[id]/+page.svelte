@@ -13,15 +13,15 @@
       class="inline w-fit scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
       {data.character.name}
     </h1>
-    <blockquote class="inline ml-2 border-l-2 pl-4 italic lg:ml-1 lg:pl-2">
+    <blockquote class="ml-2 inline border-l-2 pl-4 italic lg:ml-1 lg:pl-2">
       {data.character.shortDescription}
     </blockquote>
   </div>
   <Separator class="my-4" />
-  <div class="my-4 mx-2 lg:mr-[25%]">
+  <div class="mx-2 my-4 lg:mr-[25%]">
     <CharacterCard
       character={data.character}
-      class="hidden md:block w-fit float-right mx-6 mb-6 before:h-0" />
+      class="float-right mx-6 mb-6 hidden w-fit before:h-0 md:block" />
     <CharacterSummary character={data.character} class="inline align-top" />
   </div>
 </div>

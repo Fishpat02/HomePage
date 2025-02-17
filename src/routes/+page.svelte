@@ -7,7 +7,7 @@
 </script>
 
 <div class="mx-[25%] mb-12">
-  <h1 class="text-center text-2xl underline font-bold py-4">
+  <h1 class="py-4 text-center text-2xl font-bold underline">
     Welcome to my home page!
   </h1>
   <p>
@@ -17,7 +17,7 @@
   </p>
 </div>
 
-<div class="grid grid-cols-3 gap-4 mx-12">
+<div class="mx-12 grid grid-cols-3 gap-4">
   {#each data.characters as character (character.id)}
     <CharacterCard {character} />
   {/each}
